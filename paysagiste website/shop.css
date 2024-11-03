@@ -1,100 +1,34 @@
-/* Conteneur des catégories */
-.categories-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Les cartes auront la même hauteur */
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-/* Carte de catégorie individuelle */
-.category-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 30%;
-    cursor: pointer;
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column; /* Alignement vertical du contenu */
-    justify-content: space-between; /* Espace entre les éléments de la carte */
-    height: 350px; /* Hauteur fixe pour uniformiser la taille des cartes */
-}
-
-/* Image des catégories */
-.category-card img {
-    width: 100%;
-    height: 200px; /* Hauteur fixe des images pour uniformiser leur taille */
-    object-fit: cover; /* Recadre l'image tout en conservant son aspect */
-    border-radius: 8px 8px 0 0; /* Arrondi les coins supérieurs uniquement */
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Réactivité pour les écrans plus petits */
-@media (max-width: 768px) {
-    .categories-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .category-card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
-
-/* Icone panier avec Boxicon */
-.cart i {
-    font-size: 24px;
-    color: black;
-    transition: color 0.3s ease;
-}
-
-.cart i:hover {
-    color: #f0a500;
-}
-
-/* Style de base */
+/* Style de base pour le corps */
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 /* En-tête */
 header {
-    background-color: #fffcfc;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: #fffcfc;
     border-bottom: 1px solid #ddd;
 }
 
+/* Logo */
 .logo img {
     width: 60px;
     height: auto;
 }
 
+/* Menu de navigation */
 .nav-menu {
     display: flex;
+    gap: 20px;
     list-style-type: none;
     padding: 0;
     margin: 0;
-    gap: 20px;
-}
-
-.nav-menu li {
-    list-style: none;
 }
 
 .nav-menu li a {
@@ -108,13 +42,75 @@ header {
     color: #f0a500;
 }
 
-/* Pied de page */
+/* Conteneur des catégories */
+.categories-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Carte de catégorie individuelle */
+.category-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 350px;
+    position: relative;
+}
+
+.category-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Titre de la catégorie en bas de l'image */
+.category-title {
+    background-color: #d3d3d3;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Effet de survol pour les cartes de catégorie */
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style du pied de page */
 footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
-    border-top: 1px solid #ddd;
-    margin-top: 20px;
     font-size: 14px;
     color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Adaptation pour les petits écrans */
+@media (max-width: 768px) {
+    .categories-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
