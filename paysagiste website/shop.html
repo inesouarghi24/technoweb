@@ -4,51 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catégorie 1</title>
-    <link rel="stylesheet" href="a1c1.css">
+    <title>Shop - Catégories</title>
+    <link rel="stylesheet" href="shop.css">
 </head>
 
 <body>
-    <!-- En-tête de navigation -->
-    <nav class="navigation">
-        <header>
-            <div class="logo">
-                <img src="logo.png" alt="Logo">
-            </div>
+
+    <!-- En-tête -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
             <ul class="nav-menu">
                 <li><a href="accueil.html">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="galerie.html">Project</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="actualites.html">Actuality</a></li>
                 <li><a href="conseils.html">Advices</a></li>
-                <li><a href="actualites.html">News</a></li>
-                <li class="cart">
-                    <a href="panier.html">
-                        <i class='bx bx-cart'></i>
-                    </a>
-                </li>
             </ul>
-        </header>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Conteneur des catégories -->
+    <!-- Conteneur des catégories de la boutique -->
     <main>
         <section class="categories-container">
-            <div class="category-card">
-                <img src="categorie1.jpg" alt="Catégorie 1">
-                <h2>Catégorie 1</h2>
-                <p>Description de la catégorie 1.</p>
-            </div>
-            <div class="category-card">
-                <img src="categorie2.jpg" alt="Catégorie 2">
-                <h2>Catégorie 2</h2>
-                <p>Description de la catégorie 2.</p>
-            </div>
-            <div class="category-card">
-                <img src="categorie3.jpg" alt="Catégorie 3">
-                <h2>Catégorie 3</h2>
-                <p>Description de la catégorie 3.</p>
-            </div>
+            <!-- Catégorie : Plant Soil -->
+            <a href="cat1.html" class="category-card">
+                <img src="terre.jpg" alt="Plant Soil">
+                <div class="category-title">Plant Soil</div>
+            </a>
+
+            <!-- Catégorie : Trimming Tools -->
+            <a href="cat2.html" class="category-card">
+                <img src="tools.webp" alt="Trimming Tools">
+                <div class="category-title">Trimming Tools</div>
+            </a>
+
+            <!-- Catégorie : Loppers -->
+            <a href="cat3.html" class="category-card">
+                <img src="rabot.webp" alt="Loppers">
+                <div class="category-title">Loppers</div>
+            </a>
         </section>
     </main>
 
@@ -56,6 +54,7 @@
     <footer>
         <p>&copy; 2024 L'Arbre Envie. Tous droits réservés.</p>
     </footer>
+
 </body>
 
 </html>
