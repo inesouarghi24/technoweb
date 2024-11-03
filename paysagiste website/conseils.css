@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
 }
-
+ 
 /* En-tête */
 header {
     background-color: #ffffff; /* Fond blanc */
@@ -13,32 +13,32 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+ 
 .logo img {
     max-height: 50px;
 }
-
+ 
 .nav-menu {
     display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 .nav-menu li {
     margin: 0 15px;
 }
-
+ 
 .nav-menu li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-
+ 
 .nav-menu li a:hover {
     color: #007bff; /* Couleur de survol */
 }
-
+ 
 /* Style de la photo principale comme une bannière */
 .main-photo {
     width: 100%;
@@ -46,23 +46,23 @@ header {
     overflow: hidden;
     position: relative;
 }
-
+ 
 .main-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+ 
 /* Galerie de photos */
 .photo-gallery {
     text-align: center;
     padding: 20px;
 }
-
+ 
 .photo-gallery h2 {
     margin: 20px 0 10px;
 }
-
+ 
 .photo-row {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ header {
     gap: 15px;
     margin-bottom: 20px;
 }
-
+ 
 .photo-row img {
     width: 200px;
     height: 150px;
@@ -78,11 +78,11 @@ header {
     border: 2px solid #ddd;
     transition: transform 0.3s;
 }
-
+ 
 .photo-row img:hover {
     transform: scale(1.05); /* Zoom léger */
 }
-
+ 
 .see-more {
     text-decoration: none;
     color: blue;
@@ -90,24 +90,24 @@ header {
     margin-top: 20px;
     text-align: right;
 }
-
+ 
 .see-more:hover {
     color: #0056b3;
 }
-
+ 
 /* Pied de page */
 footer {
     background-color: #f1f1f1;
     text-align: center;
     padding: 10px;
 }
-
+ 
 /* Section principale avec le formulaire */
 .form-header {
     text-align: center;
     padding: 20px;
 }
-
+ 
 .form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -116,19 +116,19 @@ footer {
     border-radius: 8px;
     background-color: #f9f9f9;
 }
-
+ 
 /* Styles pour les groupes de champs */
 .form-group {
     margin-bottom: 15px;
 }
-
+ 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     color: #555;
     font-weight: bold;
 }
-
+ 
 .form-group input[type="text"],
 .form-group input[type="date"] {
     width: 100%;
@@ -137,7 +137,7 @@ footer {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
+ 
 /* Bouton d'envoi */
 button[type="submit"] {
     width: 100%;
@@ -151,11 +151,11 @@ button[type="submit"] {
     cursor: pointer;
     margin-top: 10px;
 }
-
+ 
 button[type="submit"]:hover {
     background-color: #388e3c; /* Vert plus foncé au survol */
 }
-
+ 
 /* Style pour le résultat de la recommandation */
 .result {
     margin-top: 20px;
@@ -165,3 +165,5 @@ button[type="submit"]:hover {
     border: 1px solid #c8e6c9;
     border-radius: 8px;
 }
+ 
+ 
