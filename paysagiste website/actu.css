@@ -1,0 +1,73 @@
+/* Style de base */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* En-tête */
+header {
+    background-color: #fffcfc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Logo */
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Menu de navigation */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+    color: #4CAF50;
+}
+
+/* Style pour le contenu principal */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+article h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+article p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Pied de page */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    color: #666;
+    margin-top: 20px;
+}
