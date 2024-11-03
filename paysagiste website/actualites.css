@@ -1,43 +1,112 @@
-/*faire un blog en somme avec les actualités */
-
+/* Style de base */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #ffffff;
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #fffcfc;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ddd;
 }
 
-header .nav-left,
-header .nav-right {
+/* Logo */
+.logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Menu de navigation */
+.nav-menu {
     display: flex;
+    gap: 20px;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-header .nav-left li,
-header .nav-right li {
-    margin: 0 15px;
-}
-
-header .nav-left li a,
-header .nav-right li a {
+.nav-menu li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-.logo {
-    text-align: center;
+    transition: color 0.3s ease;
 }
 
-.logo img {
-    width: 3cm;
-    height: auto;
+.nav-menu li a:hover {
+    color: #f0a500;
+}
+
+/* Conteneur des articles de news */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style pour chaque article de news */
+.news-article {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-article h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.news-article p {
+    font-size: 1em;
+    color: #666;
+    padding: 0 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #45a049;
+}
+
+.news-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Pied de page */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
 }
