@@ -4,4 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conseils</title>
+    <title>Ajouter un Arbre</title>
+    <link rel="stylesheet" href="ia.css">
+</head>
+
+<body>
+
+    <!-- En-tête (identique à la page d'accueil) -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="accueil.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="actualites.html">Actuality</a></li>
+                <li><a href="conseils.html">Advices</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section principale avec le formulaire -->
+    <main>
+        <div class="form-header">
+            <h2>Quand tailler votre arbre</h2>
+        </div>
+        <div class="form-container">
+            <form id="taille-form" action="javascript:void(0);">
+                <div class="form-group">
+                    <label for="categorie">Catégorie d'arbre :</label>
+                    <input type="text" id="categorie" name="categorie" placeholder="Ex : Conifère" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nom">Nom de l'arbre :</label>
+                    <input type="text" id="nom" name="nom" placeholder="Ex : Pin sylvestre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="climat">Climat :</label>
+                    <input type="text" id="climat" name="climat" placeholder="Ex : Tempéré" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-taille">Dernière taille :</label>
+                    <input type="date" id="date-taille" name="date-taille" required>
+                </div>
+
+                <button type="submit">Rechercher</button>
+            </form>
+            <!-- Résultat de la recommandation -->
+            <div id="result" class="result"></div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2024 L'Arbre En Vie - Tous droits réservés</p>
+    </footer>
+
+    <!-- Script JavaScript pour le traitement -->
+    <script>
+        document.getElementById('taille-form').addEventListener('submit', function () {
+            // Récupération des valeurs du formulaire
+            const climat = document.getElementById('climat').value.toLowerCase();
+            const dateTaille = new Date(document.getElementById('date-taille').value);
+            const result = document.getElementById('result');
+
+            // Calcul de la prochaine période de taille en fonction du climat
+            let moisRecommande;
+            if (climat.includes('tempéré')) {
+                moisRecommande = "entre fin hiver et début printemps";
+            } else if (climat.includes('méditerranéen')) {
+                moisRecommande = "au début de l'automne";
+            } else if (climat.includes('tropical')) {
+                moisRecommande = "juste avant la saison des pluies";
+            } else {
+                moisRecommande = "selon les conditions locales";
+            }
+
+            // Calcul de la prochaine taille en fonction de la dernière date
+            const prochaineTaille = new Date(dateTaille);
+            prochaineTaille.setFullYear(prochaineTaille.getFullYear() + 1);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dateRecommandee = prochaineTaille.toLocaleDateString('fr-FR', options);
+
+            // Affichage du résultat
+            result.innerHTML = `<p>Il est recommandé de tailler votre arbre ${moisRecommande}. La prochaine taille pourrait être prévue aux alentours du ${dateRecommandee}.</p>`;
+        });
+    </script>
+
+</body>
+
+</html>
